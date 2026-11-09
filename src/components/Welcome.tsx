@@ -21,7 +21,7 @@ export function Welcome({
         <p className="font-sans text-[13px] font-semibold uppercase tracking-[0.2em] text-clay">
           Pathfinder
         </p>
-        <h1 className="mt-4 font-display text-[clamp(2.4rem,6vw,3.6rem)] font-medium leading-[1.04] tracking-[-0.02em] text-ink">
+        <h1 className="mt-4 font-display text-[clamp(2.05rem,7vw,3.6rem)] font-medium leading-[1.05] tracking-[-0.02em] text-ink">
           Let’s find the shape of what you’re drawn to.
         </h1>
 

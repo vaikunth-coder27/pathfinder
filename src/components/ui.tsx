@@ -128,14 +128,23 @@ export function Shell({
         )}
       </header>
 
-      <main className="mx-auto flex w-full max-w-[780px] flex-1 flex-col px-5 py-8 sm:py-12">
+      <main
+        className={[
+          'mx-auto flex w-full max-w-[780px] flex-1 flex-col px-5 pt-8 sm:pt-12',
+          // leave room so the last items can scroll clear of the sticky footer
+          footer ? 'pb-32 sm:pb-28' : 'pb-8 sm:pb-12',
+        ].join(' ')}
+      >
         {kicker && <div className="mb-6 sm:hidden">{kicker}</div>}
         {children}
       </main>
 
       {footer && (
-        <footer className="sticky bottom-0 border-t border-line bg-paper/90 backdrop-blur-sm">
-          <div className="mx-auto flex w-full max-w-[780px] items-center justify-between px-5 py-4">
+        <footer
+          className="sticky bottom-0 border-t border-line bg-paper/95 backdrop-blur-sm"
+          style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+        >
+          <div className="mx-auto flex w-full max-w-[780px] items-center justify-between gap-3 px-5 py-3.5">
             {footer}
           </div>
         </footer>

@@ -200,7 +200,7 @@ function OptionPill({
       onClick={onClick}
       aria-pressed={selected}
       className={[
-        'rounded-full border px-4 py-2 font-sans text-[15px] transition-all',
+        'rounded-full border px-4 py-2.5 font-sans text-[15px] transition-all',
         selected
           ? 'border-spruce bg-spruce-tint text-spruce font-semibold'
           : 'border-line bg-surface text-ink hover:border-ink-soft',

@@ -227,7 +227,9 @@ function Aptitude({ question, value, onChange }: { question: Question; value?: s
               aria-pressed={on}
               className={[
                 'rounded-[12px] border text-left transition-all',
-                svgOptions ? 'flex aspect-square items-center justify-center p-4' : 'px-5 py-4',
+                svgOptions
+                  ? 'flex aspect-[3/2] items-center justify-center p-3 sm:aspect-square sm:p-4'
+                  : 'px-5 py-4',
                 on ? 'border-spruce bg-spruce-tint' : 'border-line bg-surface hover:border-ink-soft',
               ].join(' ')}
             >
@@ -301,7 +303,7 @@ function Rank({ question, value, onChange }: { question: Question; value?: strin
                 type="button"
                 whileTap={{ scale: 0.97 }}
                 onClick={() => add(o.id)}
-                className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 font-sans text-[15px] text-ink transition-colors hover:border-ink-soft"
+                className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2.5 font-sans text-[15px] text-ink transition-colors hover:border-ink-soft"
               >
                 <Icon name={o.icon} size={17} className="text-spruce" />
                 {o.label}

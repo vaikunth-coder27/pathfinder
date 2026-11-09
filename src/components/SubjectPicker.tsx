@@ -128,7 +128,7 @@ export function SubjectPicker({
                   animate={{ opacity: 1, scale: 1 }}
                   whileTap={{ scale: 0.97 }}
                   className={[
-                    'inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-[15px] transition-colors',
+                    'inline-flex items-center gap-2 rounded-full border px-4 py-2.5 font-sans text-[15px] transition-colors',
                     on
                       ? 'border-spruce bg-spruce-tint text-spruce font-semibold'
                       : 'border-line bg-surface text-ink hover:border-ink-soft',
