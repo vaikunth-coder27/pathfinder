@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+/* Self-hosted variable fonts, the strongest anti-slop lever. */
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/hanken-grotesk';
+
+/* ---- Locked design tokens (see DESIGN.md) ---- */
+@theme {
+  --color-paper: #f3efe6;
+  --color-surface: #fbf9f4;
+  --color-ink: #1c1917;
+  --color-ink-soft: #5b5347;
+  --color-line: #e2dbcb;
+  --color-spruce: #1f4d43;
+  --color-spruce-deep: #15362f;
+  --color-spruce-tint: #e6ede8;
+  --color-clay: #be6a2e;
+
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Hanken Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  touch-action: manipulation;
+  font-family: inherit;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Fine paper grain + a single hairline grid rule motif, no glassy blobs. */
+.paper-rule {
+  background-image: linear-gradient(to right, var(--color-line) 1px, transparent 1px);
+  background-size: 100% 100%;
+}
+
+/* Workbook section numeral */
+.numeral {
+  font-family: var(--font-display);
+  font-weight: 340;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1, 'opsz' 144;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Focus ring in brand spruce, square-ish to match the editorial grid. */
+*:focus-visible {
+  outline: 2px solid var(--color-spruce);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
